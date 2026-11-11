@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Nos accessoires — DEFUSTEL</title>
+<meta content="Cravates, nœuds papillon, chaussettes, pochettes, boutons de manchette et ceintures DEFUSTEL, choisis et finis avec le même soin que nos costumes." name="description">
+<meta content="#0a0a0b" name="theme-color">
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0b'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23c2a066' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" rel="icon">
+<script>document.documentElement.classList.replace('no-js', 'js');</script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="assets/css/massiri.css" rel="stylesheet">
+</head>
+<body class="page-shop">
+<a class="skip-link" href="#product-grid">Aller aux produits</a>
+
+<header class="site-header" id="site-header">
+  <a aria-label="DEFUSTEL, accueil" class="wordmark" href="index.html">DEFUSTEL</a>
+  <nav aria-label="Navigation principale" class="nav">
+    <a href="index.html#maison">La maison</a>
+    <a aria-current="page" href="accessoires.html">La boutique</a>
+    <div class="prefs">
+      <button aria-controls="prefs-panel" aria-expanded="false" class="prefs__toggle" id="prefs-toggle" type="button"><span id="prefs-label">FR · FCFA</span></button>
+      <div class="prefs__panel" hidden id="prefs-panel">
+        <p class="prefs__title">Langue</p>
+        <div class="prefs__opts">
+          <button data-lang="fr" lang="fr" type="button">Français</button>
+          <button data-lang="en" lang="en" type="button">English</button>
+        </div>
+        <p class="prefs__title">Devise</p>
+        <div class="prefs__opts">
+          <button data-cur="XOF" type="button">FCFA</button>
+          <button data-cur="EUR" type="button">€ Euro</button>
+          <button data-cur="USD" type="button">$ Dollar</button>
+        </div>
+      </div>
+    </div>
+    <button aria-controls="cart" aria-expanded="false" aria-label="Panier vide" class="cart-toggle" data-i18n-skip id="cart-toggle" type="button">
+      <svg aria-hidden="true" class="cart-toggle__icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15.75 7.5V6a3.75 3.75 0 10-7.5 0v1.5m11.356 1.007l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25c-.67 0-1.19-.578-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z" stroke-linecap="round" stroke-linejoin="round"/></svg><span aria-hidden="true" class="cart-toggle__count" hidden id="cart-count">0</span>
+    </button>
+    <a class="nav__cta" href="index.html#rendez-vous">Prendre rendez-vous</a>
+  </nav>
+  <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" data-i18n-skip id="menu-toggle" type="button">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Menu mobile (≤ 900 px) -->
+<div class="mobile-menu" hidden id="mobile-menu">
+  <nav aria-label="Menu" class="mobile-menu__nav">
+    <a href="index.html#maison"><span>01</span>La maison</a>
+    <a href="accessoires.html"><span>02</span>La boutique</a>
+  </nav>
+  <a class="btn mobile-menu__cta" href="index.html#rendez-vous">Prendre rendez-vous</a>
+  <div class="mobile-prefs">
+    <div>
+      <p class="prefs__title">Langue</p>
+      <div class="prefs__opts">
+        <button data-lang="fr" lang="fr" type="button">Français</button>
+        <button data-lang="en" lang="en" type="button">English</button>
+      </div>
+    </div>
+    <div>
+      <p class="prefs__title">Devise</p>
+      <div class="prefs__opts">
+        <button data-cur="XOF" type="button">FCFA</button>
+        <button data-cur="EUR" type="button">€ Euro</button>
+        <button data-cur="USD" type="button">$ Dollar</button>
+      </div>
+    </div>
+  </div>
+  <p class="mobile-menu__foot">Paris · Abidjan</p>
+</div>
+
+<!-- TODO : prix provisoires ; catalogue dans assets/js/products.js -->
+<main class="collection" id="main">
+  <nav aria-label="Fil d'Ariane" class="crumbs">
+    <ol>
+      <li><a href="index.html">Accueil</a></li>
+      <li aria-hidden="true">/</li>
+      <li aria-current="page">Nos accessoires</li>
+    </ol>
+  </nav>
+
+  <header class="collection__head">
+    <h1 class="section-title" id="collection-title">Nos <em>accessoires</em></h1>
+    <p class="lead">Les pièces qui accompagnent le costume, choisies et finies avec le même soin : cravates, nœuds, chaussettes, pochettes, boutons de manchette et ceintures.</p>
+  </header>
+
+  <!-- Barre d'outils : filtres (mobile), nombre d'articles, tri -->
+  <div class="toolbar">
+    <div class="toolbar__left">
+      <button aria-controls="filters" aria-expanded="false" class="toolbar__filters" id="filters-open" type="button">Filtrer</button>
+      <p aria-live="polite" class="toolbar__count" id="collection-count"></p>
+    </div>
+    <label class="toolbar__sort">
+      <span>Trier par</span>
+      <select id="sort-select"></select>
+    </label>
+  </div>
+  <div aria-label="Filtres actifs" class="chips" hidden id="active-filters" role="group"></div>
+
+  <div class="collection__layout">
+    <div class="filters-backdrop" hidden id="filters-backdrop"></div>
+    <aside aria-label="Filtres" class="filters" id="filters">
+      <div class="filters__head">
+        <h2>Filtrer</h2>
+        <button aria-label="Fermer les filtres" class="cart__close" id="filters-close" type="button">×</button>
+      </div>
+      <form class="filters__form" id="filters-form"></form>
+      <div class="filters__foot">
+        <button class="filters__clear" id="filters-clear" type="button">Tout effacer</button>
+        <button class="btn" id="filters-apply" type="button">Voir les articles</button>
+      </div>
+    </aside>
+
+    <div>
+      <ul class="grid" id="product-grid"></ul>
+      <div class="empty" hidden id="empty-state">
+        <p class="empty__title">Aucun article ne correspond à ces filtres</p>
+        <p class="lead">Essayez d'en retirer un ou deux.</p>
+        <button class="btn" id="empty-reset" type="button">Effacer tous les filtres</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Panier (démonstration) -->
+<div class="cart-backdrop" hidden id="cart-backdrop"></div>
+<aside aria-labelledby="cart-title" aria-modal="true" class="cart" hidden id="cart" role="dialog" tabindex="-1">
+  <header class="cart__head">
+    <h2 class="cart__title" id="cart-title">Votre panier</h2>
+    <button aria-label="Fermer le panier" class="cart__close" id="cart-close" type="button">×</button>
+  </header>
+  <ul class="cart__items" id="cart-items"></ul>
+  <p class="cart__empty" id="cart-empty">Votre panier est vide.</p>
+  <div class="cart__foot" id="cart-foot">
+    <p class="cart__total"><span>Sous-total</span><span id="cart-total">0 FCFA</span></p>
+    <p class="cart__note">Livraison offerte · retours sous 30 jours</p>
+    <button class="btn cart__checkout" id="cart-checkout" type="button">Passer commande</button>
+  </div>
+  <div class="cart__done" hidden id="cart-done">
+    <p class="eyebrow">Merci</p>
+    <p class="cart__done-title"><em>Votre commande est confirmée.</em></p>
+    <p class="cart__note">Site de démonstration : aucun paiement n'a été effectué.</p>
+  </div>
+</aside>
+
+<footer class="site-footer">
+  <div>
+    <p class="wordmark">DEFUSTEL</p>
+    <p class="site-footer__tagline">Un costume, un seul homme.</p>
+  </div>
+  <nav aria-label="Pied de page" class="site-footer__nav">
+    <a href="index.html#maison">La maison</a>
+    <a href="index.html#rendez-vous">Prendre rendez-vous</a>
+    <a href="accessoires.html">La boutique</a>
+  </nav>
+  <p class="site-footer__legal">© <span id="year">2026</span> DEFUSTEL — Maison de tailleur. Sur rendez-vous.</p>
+</footer>
+
+<script src="assets/js/i18n-en.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/prefs.js"></script>
+<script src="assets/js/collection.js"></script>
+<script src="assets/js/shop.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/tournage.js"></script>
+</body>
+</html>

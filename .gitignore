@@ -1,0 +1,10 @@
+/*
+!/site/
+!/scripts/
+!/LANCER.md
+!/README.md
+!/package.json
+!/package-lock.json
+!/.gitignore
+__pycache__/
+.env*

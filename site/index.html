@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>DEFUSTEL — Maison de tailleur</title>
+<meta content="DEFUSTEL, maison de tailleur. La chemise, le gilet, la veste, l'homme : un costume coupé pour un seul homme, sur rendez-vous." name="description">
+<meta content="#0a0a0b" name="theme-color">
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0b'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23c2a066' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" rel="icon">
+<meta content="website" property="og:type">
+<meta content="fr_FR" property="og:locale">
+<meta content="DEFUSTEL — Maison de tailleur" property="og:title">
+<meta content="Un costume coupé pour un seul homme. Sur rendez-vous." property="og:description">
+<!-- TODO : passer og:image en URL absolue une fois le domaine connu -->
+<meta content="assets/img/still-avenue.webp" property="og:image">
+<script>document.documentElement.classList.replace('no-js', 'js');</script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="assets/css/massiri.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#maison">Passer le film</a>
+
+<!-- Chargement : n'attend qu'une première passe d'images, le reste arrive pendant le défilement -->
+<div aria-hidden="true" class="loader" id="loader">
+  <p class="loader__mark">DEFUSTEL</p>
+  <div class="loader__bar"><span id="loader-fill"></span></div>
+  <p class="loader__pct"><span id="loader-pct">0</span><i>%</i></p>
+</div>
+
+<header class="site-header" id="site-header">
+  <a aria-label="DEFUSTEL, retour en haut" class="wordmark" href="#top">DEFUSTEL</a>
+  <nav aria-label="Navigation principale" class="nav">
+    <a href="#maison">La maison</a>
+    <a href="accessoires.html">La boutique</a>
+    <div class="prefs">
+      <button aria-controls="prefs-panel" aria-expanded="false" class="prefs__toggle" id="prefs-toggle" type="button"><span id="prefs-label">FR · FCFA</span></button>
+      <div class="prefs__panel" hidden id="prefs-panel">
+        <p class="prefs__title">Langue</p>
+        <div class="prefs__opts">
+          <button data-lang="fr" lang="fr" type="button">Français</button>
+          <button data-lang="en" lang="en" type="button">English</button>
+        </div>
+        <p class="prefs__title">Devise</p>
+        <div class="prefs__opts">
+          <button data-cur="XOF" type="button">FCFA</button>
+          <button data-cur="EUR" type="button">€ Euro</button>
+          <button data-cur="USD" type="button">$ Dollar</button>
+        </div>
+      </div>
+    </div>
+    <button aria-controls="cart" aria-expanded="false" aria-label="Panier vide" class="cart-toggle" data-i18n-skip id="cart-toggle" type="button">
+      <svg aria-hidden="true" class="cart-toggle__icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15.75 7.5V6a3.75 3.75 0 10-7.5 0v1.5m11.356 1.007l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25c-.67 0-1.19-.578-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z" stroke-linecap="round" stroke-linejoin="round"/></svg><span aria-hidden="true" class="cart-toggle__count" hidden id="cart-count">0</span>
+    </button>
+    <a class="nav__cta" href="#rendez-vous">Prendre rendez-vous</a>
+  </nav>
+  <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" data-i18n-skip id="menu-toggle" type="button">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Menu mobile (≤ 900 px) -->
+<div class="mobile-menu" hidden id="mobile-menu">
+  <nav aria-label="Menu" class="mobile-menu__nav">
+    <a href="#maison"><span>01</span>La maison</a>
+    <a href="accessoires.html"><span>02</span>La boutique</a>
+  </nav>
+  <a class="btn mobile-menu__cta" href="#rendez-vous">Prendre rendez-vous</a>
+  <div class="mobile-prefs">
+    <div>
+      <p class="prefs__title">Langue</p>
+      <div class="prefs__opts">
+        <button data-lang="fr" lang="fr" type="button">Français</button>
+        <button data-lang="en" lang="en" type="button">English</button>
+      </div>
+    </div>
+    <div>
+      <p class="prefs__title">Devise</p>
+      <div class="prefs__opts">
+        <button data-cur="XOF" type="button">FCFA</button>
+        <button data-cur="EUR" type="button">€ Euro</button>
+        <button data-cur="USD" type="button">$ Dollar</button>
+      </div>
+    </div>
+  </div>
+  <p class="mobile-menu__foot">Paris · Abidjan</p>
+</div>
+
+<main id="top">
+
+<!-- ===================================================================
+     LE FILM — un seul plan, piloté par le défilement (627 images)
+     =================================================================== -->
+<section aria-label="Le film DEFUSTEL : de la chemise à l'homme" class="scene" id="scene">
+  <div class="sticky" id="sticky">
+    <img alt="Une silhouette de lumière apparaît au centre d'une scène sombre" class="poster" height="720" src="assets/img/poster.webp" width="1280">
+    <canvas aria-hidden="true" class="frames" id="frames"></canvas>
+
+    <!-- Broderie sur la manchette de l'image finale (coordonnées de l'image 1280×720).
+         Le groupe #emb-word est posé dans le plan de la manchette : axe du bras (-32,8°) et pourtour (27°). -->
+    <svg aria-hidden="true" class="embroidery" id="embroidery" preserveAspectRatio="none" viewBox="0 0 1280 720">
+      <defs>
+        <pattern height="3" id="emb-satin" patternTransform="rotate(62)" patternUnits="userSpaceOnUse" width="3">
+          <rect fill="var(--thread)" height="3" width="3"/>
+          <rect fill="var(--thread-light)" height="1" width="3"/>
+        </pattern>
+        <mask height="260" id="emb-mask" maskUnits="userSpaceOnUse" width="560" x="-280" y="-140">
+          <g fill="none" id="emb-mask-paths" stroke="#fff" stroke-linecap="round" stroke-width="7"></g>
+        </mask>
+        <filter height="140%" id="emb-relief" width="120%" x="-10%" y="-20%">
+          <feDropShadow dx="0.8" dy="1.2" flood-color="#000" flood-opacity=".45" stdDeviation="0.8"/>
+        </filter>
+        <filter id="emb-glow" height="400%" width="400%" x="-150%" y="-150%">
+          <feGaussianBlur stdDeviation="2.5"/>
+        </filter>
+      </defs>
+      <g filter="url(#emb-relief)" id="emb-word" transform="matrix(0.437 -0.282 0.409 0.211 400 584)">
+        <g class="emb-fill" fill="url(#emb-satin)" stroke="var(--thread)" stroke-width="1.6"></g>
+        <g class="emb-run" fill="none" mask="url(#emb-mask)" stroke="var(--thread)" stroke-dasharray="5 2.5" stroke-width="2.4"></g>
+        <circle class="emb-needle" cx="0" cy="0" id="emb-needle" r="5"/>
+      </g>
+    </svg>
+
+    <div aria-hidden="true" class="shade shade--vignette"></div>
+    <div aria-hidden="true" class="shade shade--top"></div>
+    <div aria-hidden="true" class="shade shade--bottom"></div>
+    <div aria-hidden="true" class="grain"></div>
+
+    <div class="panel panel--hero" data-panel="hero">
+      <p class="eyebrow">Maison de tailleur</p>
+      <h1 class="hero-title">DEFUSTEL</h1>
+      <p class="hero-tagline">Un costume, <em>un seul homme.</em></p>
+      <p aria-hidden="true" class="scroll-cue"><span></span>Faites défiler</p>
+    </div>
+
+    <!-- TODO : faire valider les étoffes et affirmations de savoir-faire par la maison -->
+    <article class="panel panel--left" data-from="70" data-panel="1" data-to="145">
+      <span class="panel__index">01</span>
+      <p class="panel__kicker">Le fondement</p>
+      <h2 class="panel__title">Une chemise<br><em>de pur coton</em></h2>
+      <p class="panel__spec"><i>Étoffe</i> Popeline de coton</p>
+    </article>
+
+    <article class="panel panel--right" data-from="160" data-panel="2" data-to="240">
+      <span class="panel__index">02</span>
+      <p class="panel__kicker">Le gilet</p>
+      <h2 class="panel__title">La ligne,<br><em>tenue au plus près</em></h2>
+      <p class="panel__body">Le gilet dessine la taille. La cravate, coupée dans le biais, tombe droit et ne vrille jamais.</p>
+      <p class="panel__spec"><i>Détail</i> Dos doublé de soie</p>
+    </article>
+
+    <article class="panel panel--left" data-from="255" data-panel="3" data-to="330">
+      <span class="panel__index">03</span>
+      <p class="panel__kicker">La veste</p>
+      <h2 class="panel__title">Construite<br><em>sur une toile</em></h2>
+      <p class="panel__spec"><i>Structure</i> Entoilage cousu</p>
+    </article>
+
+    <article class="panel panel--right" data-from="345" data-panel="4" data-to="405">
+      <span class="panel__index">04</span>
+      <p class="panel__kicker">La coupe</p>
+      <h2 class="panel__title">La silhouette<br><em>complète</em></h2>
+      <p class="panel__spec"><i>Étoffe</i> Laine peignée</p>
+    </article>
+
+    <article class="panel panel--left" data-from="425" data-panel="5" data-to="488">
+      <span class="panel__index">05</span>
+      <p class="panel__kicker">L'homme</p>
+      <h2 class="panel__title">Fait<br><em>pour être porté</em></h2>
+      <p class="panel__spec"><i>Mesure</i> Un patron pour vous seul</p>
+    </article>
+
+    <article class="panel panel--right" data-from="505" data-panel="6" data-to="585">
+      <span class="panel__index">06</span>
+      <p class="panel__kicker">La sortie</p>
+      <h2 class="panel__title">Une langue<br><em>de couleurs</em></h2>
+      <p class="panel__spec"><i>Palette</i> Quatre tons signature</p>
+    </article>
+
+    <article class="panel panel--left panel--top-mobile" data-from="598" data-panel="7" data-to="627">
+      <span class="panel__index">07</span>
+      <p class="panel__kicker">Le détail</p>
+      <h2 class="panel__title">Le dernier<br><em>quart de pouce</em></h2>
+      <p class="panel__body">Des boutonnières de manche qui s'ouvrent vraiment. Des points que l'on ne trouve qu'au toucher.</p>
+      <p class="panel__spec"><i>Finition</i> Manches à boutonnières</p>
+    </article>
+
+    <div aria-hidden="true" class="progress"><span id="progress-fill"></span></div>
+    <p aria-hidden="true" class="scene-count"><span id="movement-no">00</span><i>/ 07</i></p>
+  </div>
+</section>
+
+<!-- ===================================================================
+     LA MAISON
+     =================================================================== -->
+<section aria-labelledby="maison-title" class="section maison" id="maison">
+  <!-- TODO : compléter avec les faits réels (nom du tailleur, année et ville de fondation, parcours) et faire valider la citation -->
+  <div class="maison__story">
+    <figure class="maison__portrait">
+      <img alt="Le fondateur de DEFUSTEL, maître tailleur, bras croisés, en veste croisée de tweed gris" height="473" loading="lazy" src="assets/img/tailleur.webp" width="288">
+      <figcaption><span>Le fondateur</span>Maître tailleur</figcaption>
+    </figure>
+    <div class="maison__text">
+      <p class="eyebrow">La maison</p>
+      <h2 class="section-title" id="maison-title">Une histoire<br><em>cousue main.</em></h2>
+      <p class="lead">DEFUSTEL est née d'un geste appris jeune et jamais abandonné : couper, bâtir, essayer, recommencer, jusqu'à ce que le vêtement tombe juste.</p>
+      <p class="maison__para">Derrière la maison, il y a un homme. Un tailleur formé à l'ancienne, auprès de ceux qui traçaient encore à la craie et cousaient la toile à la main. De cet apprentissage, il a gardé une règle : un costume ne se fait pas pour une taille, mais pour une personne.</p>
+      <p class="maison__para">Aujourd'hui, l'atelier perpétue cette exigence. Chaque client y est reçu en personne, chaque patron y est dessiné à la main, chaque pièce y passe par plusieurs essayages avant de quitter la maison.</p>
+      <blockquote class="quote">
+        <p>« Un costume ne se porte pas. Il se révèle. »</p>
+        <footer>Le fondateur de DEFUSTEL</footer>
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="method">
+    <p class="eyebrow">Notre façon de faire</p>
+    <ol class="method__steps">
+      <li><span class="method__no">01</span><h3>La conversation</h3><p>Votre vie, vos occasions, votre allure. Rien n'est coupé avant d'avoir compris pour qui.</p></li>
+      <li><span class="method__no">02</span><h3>Le patron</h3><p>Dessiné pour vous seul, et conservé pour vos prochaines pièces.</p></li>
+      <li><span class="method__no">03</span><h3>La toile</h3><p>Une structure cousue qui épouse la silhouette et vit avec elle.</p></li>
+      <li><span class="method__no">04</span><h3>L'essayage</h3><p>Plusieurs rendez-vous pour ajuster chaque ligne, jusqu'à la dernière.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================================================================
+     PRENDRE RENDEZ-VOUS
+     =================================================================== -->
+<section aria-labelledby="rdv-title" class="section rdv" id="rendez-vous">
+  <header class="section-head section-head--center">
+    <p class="eyebrow">Sur rendez-vous</p>
+    <h2 class="section-title section-title--lines" id="rdv-title"><span>Votre costume commence</span><br><em>par une conversation.</em></h2>
+    <p class="lead">Choisissez la boutique où vous souhaitez être reçu. Nous vous recontactons pour fixer la date de votre premier rendez-vous.</p>
+  </header>
+  <!-- TODO : horaires provisoires ; relier le formulaire à un service d'envoi (Formspree, Calendly, CRM…) -->
+  <div class="rdv__layout">
+    <div class="rdv__main">
+      <form class="rdv-form" id="rdv-form" novalidate>
+        <fieldset class="field field--wide places">
+          <legend>Où souhaitez-vous être reçu ?</legend>
+          <div class="places__grid">
+        <label class="place">
+          <input name="boutique" required type="radio" value="Paris">
+          <span class="place__city">Paris</span>
+          <span class="place__area">17e arrondissement · Ternes</span>
+        </label>
+        <label class="place">
+          <input name="boutique" required type="radio" value="Abidjan">
+          <span class="place__city">Abidjan</span>
+          <span class="place__area">2 Plateaux Vallon · Mall la Citadelle</span>
+        </label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="rdv-nom">Nom</label>
+          <input autocomplete="name" id="rdv-nom" name="nom" required type="text">
+        </div>
+        <div class="field">
+          <label for="rdv-email">E-mail</label>
+          <input autocomplete="email" id="rdv-email" name="email" required type="email">
+        </div>
+        <div class="field">
+          <label for="rdv-tel">Téléphone <span class="optional">(facultatif)</span></label>
+          <input autocomplete="tel" id="rdv-tel" name="telephone" type="tel">
+        </div>
+        <div class="field">
+          <label for="rdv-piece">Pièce souhaitée</label>
+          <select id="rdv-piece" name="piece">
+            <option>Costume deux-pièces</option>
+            <option>Costume trois-pièces</option>
+            <option>Veste seule</option>
+            <option>Smoking</option>
+            <option>Je ne sais pas encore</option>
+          </select>
+        </div>
+        <div class="field field--wide">
+          <label for="rdv-message">Votre projet <span class="optional">(facultatif)</span></label>
+          <textarea id="rdv-message" name="message" placeholder="Une occasion, une étoffe, une silhouette…" rows="4"></textarea>
+        </div>
+        <p aria-live="polite" class="form-error" id="rdv-error"></p>
+        <button class="btn" type="submit">Demander un rendez-vous</button>
+      </form>
+      <div class="rdv-success" hidden id="rdv-success" tabindex="-1">
+        <p class="eyebrow">Merci</p>
+        <p class="section-title"><em>Votre demande est entre nos mains.</em></p>
+        <p class="lead" id="rdv-success-text">Nous revenons vers vous très vite pour convenir d'un premier rendez-vous.</p>
+      </div>
+    </div>
+
+    <aside aria-labelledby="stores-title" class="stores">
+      <p class="eyebrow">Ou passez directement</p>
+      <h3 class="stores__title" id="stores-title">Nos boutiques</h3>
+      <p class="stores__intro">Nos boutiques vous accueillent aussi sans rendez-vous, pour découvrir les étoffes ou les accessoires.</p>
+      <ul class="stores__list">
+      <li>
+        <h3>Paris</h3>
+        <p>17e arrondissement, secteur de la place des Ternes / avenue des Ternes</p>
+        <p class="stores__hours">Mardi – samedi · 10 h – 19 h</p>
+      </li>
+      <li>
+        <h3>Abidjan</h3>
+        <p>Av. Émile Boga Doudou, 2 Plateaux Vallon<br>Au sein du Mall la Citadelle</p>
+        <p class="stores__hours">Mardi – samedi · 10 h – 19 h</p>
+      </li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ===================================================================
+     SHOP — démonstration : panier côté navigateur, pas de paiement réel
+     TODO : prix provisoires ; brancher un vrai paiement (Shopify, Stripe…) avant mise en ligne
+     =================================================================== -->
+<section aria-labelledby="shop-title" class="section shop" id="shop">
+  <header class="section-head">
+    <p class="eyebrow">La boutique</p>
+    <h2 class="section-title" id="shop-title">Nos <em>accessoires.</em></h2>
+    <p class="lead">Les pièces qui accompagnent le costume, choisies et finies avec le même soin.</p>
+  </header>
+  <ul class="products">
+    <li class="product" data-id="cravate">
+      <div class="product__media"><img alt="Mains nouant une cravate en soie noire sur un col de chemise blanc" class="product__worn" height="1125" loading="lazy" src="assets/img/shop/cravate-porte.webp" width="900"><img alt="La cravate en soie noire seule, à plat" class="product__alt" height="1125" loading="lazy" src="assets/img/shop/cravate-seul.webp" width="900"></div>
+      <div class="product__info">
+        <div>
+          <h3 class="product__name">La Cravate Minuit</h3>
+          <p class="product__meta">Soie noire tissée</p>
+        </div>
+        <p class="product__price" data-price-for="cravate">62 000 FCFA</p>
+      </div>
+      <button class="product__add" type="button">Ajouter au panier</button>
+    </li>
+    <li class="product" data-id="chaussettes">
+      <div class="product__media"><img alt="Jambe croisée, chaussette côtelée bleu nuit entre l'ourlet du pantalon et un richelieu noir" class="product__worn" height="1125" loading="lazy" src="assets/img/shop/chaussettes-porte.webp" width="900"><img alt="La paire de chaussettes bleu nuit à plat" class="product__alt" height="1125" loading="lazy" src="assets/img/shop/chaussettes-seul.webp" width="900"></div>
+      <div class="product__info">
+        <div>
+          <h3 class="product__name">Les Chaussettes Nuit</h3>
+          <p class="product__meta">Fil d'Écosse · bleu nuit · mi-mollet</p>
+        </div>
+        <p class="product__price" data-price-for="chaussettes">19 000 FCFA</p>
+      </div>
+      <button class="product__add" type="button">Ajouter au panier</button>
+    </li>
+    <li class="product" data-id="pochette">
+      <div class="product__media"><img alt="Doigts ajustant une pochette en soie ivoire dans la poche poitrine d'une veste noire" class="product__worn" height="1125" loading="lazy" src="assets/img/shop/pochette-porte.webp" width="900"><img alt="La pochette en soie ivoire seule, pliée" class="product__alt" height="1125" loading="lazy" src="assets/img/shop/pochette-seul.webp" width="900"></div>
+      <div class="product__info">
+        <div>
+          <h3 class="product__name">La Pochette Ivoire</h3>
+          <p class="product__meta">Soie ivoire · bords roulés main</p>
+        </div>
+        <p class="product__price" data-price-for="pochette">29 500 FCFA</p>
+      </div>
+      <button class="product__add" type="button">Ajouter au panier</button>
+    </li>
+    <li class="product" data-id="manchettes">
+      <div class="product__media"><img alt="Main fermant un bouton de manchette en onyx sur une manchette blanche" class="product__worn" height="1125" loading="lazy" src="assets/img/shop/manchettes-porte.webp" width="900"><img alt="La paire de boutons de manchette en onyx et laiton" class="product__alt" height="1125" loading="lazy" src="assets/img/shop/manchettes-seul.webp" width="900"></div>
+      <div class="product__info">
+        <div>
+          <h3 class="product__name">Les Boutons Onyx</h3>
+          <p class="product__meta">Onyx et laiton vieilli</p>
+        </div>
+        <p class="product__price" data-price-for="manchettes">78 500 FCFA</p>
+      </div>
+      <button class="product__add" type="button">Ajouter au panier</button>
+    </li>
+    <li class="product" data-id="ceinture">
+      <div class="product__media"><img alt="Veste ouverte sur une ceinture en cuir noir à boucle laiton" class="product__worn" height="1125" loading="lazy" src="assets/img/shop/ceinture-porte.webp" width="900"><img alt="La ceinture en cuir noir enroulée" class="product__alt" height="1125" loading="lazy" src="assets/img/shop/ceinture-seul.webp" width="900"></div>
+      <div class="product__info">
+        <div>
+          <h3 class="product__name">La Ceinture Atelier</h3>
+          <p class="product__meta">Veau noir · boucle laiton brossé</p>
+        </div>
+        <p class="product__price" data-price-for="ceinture">72 000 FCFA</p>
+      </div>
+      <button class="product__add" type="button">Ajouter au panier</button>
+    </li>
+    <li class="product" data-id="noeud">
+      <div class="product__media"><img alt="Main tirant le nœud papillon en soie d'un smoking" class="product__worn" height="1125" loading="lazy" src="assets/img/shop/noeud-porte.webp" width="900"><img alt="Le nœud papillon en soie noire seul" class="product__alt" height="1125" loading="lazy" src="assets/img/shop/noeud-seul.webp" width="900"></div>
+      <div class="product__info">
+        <div>
+          <h3 class="product__name">Le Nœud Soirée</h3>
+          <p class="product__meta">Soie noire · à nouer</p>
+        </div>
+        <p class="product__price" data-price-for="noeud">49 000 FCFA</p>
+      </div>
+      <button class="product__add" type="button">Ajouter au panier</button>
+    </li>
+  </ul>
+  <p class="shop__more"><a class="btn" href="accessoires.html">Voir plus</a></p>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div>
+    <p class="wordmark">DEFUSTEL</p>
+    <p class="site-footer__tagline">Un costume, un seul homme.</p>
+  </div>
+  <nav aria-label="Pied de page" class="site-footer__nav">
+    <a href="#maison">La maison</a>
+    <a href="#rendez-vous">Prendre rendez-vous</a>
+    <a href="accessoires.html">La boutique</a>
+  </nav>
+  <p class="site-footer__legal">© <span id="year">2026</span> DEFUSTEL — Maison de tailleur. Sur rendez-vous.</p>
+</footer>
+
+<!-- Panier (démonstration) -->
+<div class="cart-backdrop" hidden id="cart-backdrop"></div>
+<aside aria-labelledby="cart-title" aria-modal="true" class="cart" hidden id="cart" role="dialog" tabindex="-1">
+  <header class="cart__head">
+    <h2 class="cart__title" id="cart-title">Votre panier</h2>
+    <button aria-label="Fermer le panier" class="cart__close" id="cart-close" type="button">×</button>
+  </header>
+  <ul class="cart__items" id="cart-items"></ul>
+  <p class="cart__empty" id="cart-empty">Votre panier est vide.</p>
+  <div class="cart__foot" id="cart-foot">
+    <p class="cart__total"><span>Sous-total</span><span id="cart-total">0 FCFA</span></p>
+    <p class="cart__note">Livraison offerte · retours sous 30 jours</p>
+    <button class="btn cart__checkout" id="cart-checkout" type="button">Passer commande</button>
+  </div>
+  <div class="cart__done" hidden id="cart-done">
+    <p class="eyebrow">Merci</p>
+    <p class="cart__done-title"><em>Votre commande est confirmée.</em></p>
+    <p class="cart__note">Site de démonstration : aucun paiement n'a été effectué.</p>
+  </div>
+</aside>
+
+<script src="assets/js/i18n-en.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/prefs.js"></script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/js/embroidery-path.js"></script>
+<script src="assets/js/film.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/tournage.js"></script>
+<script src="assets/js/shop.js"></script>
+</body>
+</html>
